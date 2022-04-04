@@ -1,0 +1,14 @@
+div {
+    border: 1px solid black;
+    height: 6em;
+    width: 6em;
+}
+
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 120px);
+    grid-template-rows: repeat(auto-fill, 120px);
+    gap: 40px;
+    justify-content: center;
+}
