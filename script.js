@@ -3,12 +3,12 @@ function createGrid(num) {
     for (let i = 0; i < num; i++) {
         let row = container.appendChild(document.createElement('div'));
         for (let j = 0; j < num; j++) {
-            let coloumn = row.append(document.createElement('div'));
+            let coloumn = container.appendChild(document.createElement('div'));
         }
     }
 }
 
-createGrid(4);
+createGrid(3);
 
 
 
