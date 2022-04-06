@@ -1,75 +1,36 @@
+const container = document.getElementById('grid');
+let row = "";
+row.className = "row";
+let column = "";
+column.className = "column"
+
 function createGrid(num) {
-    const container = document.getElementById('grid');
     for (let i = 0; i < num; i++) {
-        let row = container.appendChild(document.createElement('div'));
-        for (let j = 0; j < num; j++) {
-            let coloumn = container.appendChild(document.createElement('div'));
+        row = container.appendChild(document.createElement('div'));
+        for (let j = 1; j < num; j++) {
+            column = container.appendChild(document.createElement('div'));
         }
     }
 }
 
 createGrid(3);
 
+console.dir(column.previousElementSibling);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-function createGrid(a) {
-    const container = document.getElementById('grid');    
-    for (let i = 0; i < a; i++) {
-        const row = container.appendChild(document.createElement('div'));
-        for (let j = 0; j < a; j++) {
-            const coloumn = row.appendChild(document.createElement('div'));
-        }
+function colorGenerator() { 
+    let makeColorCode = "0123456789ABCDEF";
+    let finalCode = "#";
+    for (let i = 0; i < 6; i++) {
+        finalCode += makeColorCode[Math.floor(Math.random() * 16)];
     }
+    return finalCode;
+}
+    
+function getRandomColor() {
+    row.style.backgroundColor = colorGenerator();
+    column.style.backgroundColor = colorGenerator();
 }
 
-createGrid(4);
+//add event listener for "click", getRandomColor();
+container.addEventListener("click", getRandomColor());
 
-
-function addSquare() {
-    const newSquare = document.createElement('div');
-    //Use the next two lines to add text to the div:
-    //const newContent = document.createTextNode('Insert text');
-    //newDiv.appendChild(newContent);
-    const container = document.getElementById('grid');
-    document.body.insertBefore(newSquare, container);
-}
-
-
-*/
