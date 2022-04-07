@@ -1,21 +1,20 @@
 const container = document.getElementById('grid');
-let row = "";
-row.className = "row";
-let column = "";
-column.className = "column"
+let row;
+let column;
 
+//Create the grid
 function createGrid(num) {
     for (let i = 0; i < num; i++) {
         row = container.appendChild(document.createElement('div'));
+        row.classList.add('div')
         for (let j = 1; j < num; j++) {
             column = container.appendChild(document.createElement('div'));
+            column.classList.add('div')
         }
     }
 }
 
-createGrid(3);
-
-console.dir(column.previousElementSibling);
+//Generate a random color
 
 function colorGenerator() { 
     let makeColorCode = "0123456789ABCDEF";
@@ -31,6 +30,20 @@ function getRandomColor() {
     column.style.backgroundColor = colorGenerator();
 }
 
-//add event listener for "click", getRandomColor();
-container.addEventListener("click", getRandomColor());
 
+//Prompt user to enter a number for the grid
+
+function enterNumber() {
+    let number = prompt("Enter a number from 1-16");
+        if (number < 1 || number > 16) {
+            number = prompt("Please enter a number from 1-16");
+        } else {
+            createGrid(number);
+        }
+}
+
+enterNumber();
+
+//Add random color when mouse enters a div
+
+container.addEventListener("mouseover", getRandomColor);
