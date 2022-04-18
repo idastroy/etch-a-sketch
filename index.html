@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-sketch</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap');
+    </style>
 </head>
 <body>
-    <h1>Etch-a-Scetch</h1>
-    <container id="grid"></container>
-    <button class="reset">Reset</button>
+    <div id="sketch"></div>
+        <container id="grid"></container>
+        <div class="bottom">
+            <div class="circle">A</div>
+            <h2>Etch A Sketch</h2>
+            <div class="circle">B</div>
+        </div>
+    <button id="reset">Reset</button>
 </body>
 <script src="script.js"></script>
 </html>

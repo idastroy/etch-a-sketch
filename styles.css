@@ -2,19 +2,49 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 900px;
 }
 
 #grid {
     display: grid;
-    grid-template-columns: repeat(4, 120px);
-    grid-template-rows: repeat(4, 120px);
-    justify-content: center;
+    min-height: 500px;
+    min-width: 572px;
+    border: 70px solid red;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid red;
 }
 
-div {
-    border: 1px solid black;
+#grid .div {
+    border: .1px solid rgb(246, 246, 246);
 }
 
 button {
-    margin: 20px;
+    margin: 10px;
 }
+
+.bottom {
+    display: flex;
+    background-color: red;
+    justify-content: space-evenly;
+    border-radius: 0 0 10px 10px;
+}
+
+.circle {
+    color: white;
+    background-color: white;
+    border: 1 px solid white;
+    box-shadow: 1px 1px 5px rgb(109, 79, 79);
+    border-radius: 50px;
+    padding: 40px;
+    margin: 40px;
+    margin-bottom: 2px;
+}
+
+h2 {
+    color: rgb(255, 215, 0);
+    margin: 10px 5px 0 5px;
+    padding: 10px;
+    font-family: 'Butterfly Kids', cursive;
+    font-size: 80px;
+}
+
